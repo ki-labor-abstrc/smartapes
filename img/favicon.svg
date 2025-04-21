@@ -1,0 +1,6 @@
+<!-- favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+  <rect width="100%" height="100%" fill="#ffc843"/>
+  <!-- Aquí coloca tu SVG actual -->
+  <image href="img\Group 39797.svg" width="100%" height="100%"/>
+</svg>

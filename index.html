@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartApe</title>
+    <!-- Favicon principal en formato SVG -->
+<!-- Icono principal en SVG con fondo amarillo integrado -->
+ 
+<link rel="icon" type="image/png" href="img\logo_amarillo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="img\logo_amarillo.png" sizes="32x32">
+
+    <!-- Importación de Bootstrap y Google Fonts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Estilos personalizados y Tailwind CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <!-- Sección del encabezado -->
+    <header class="head sticky top-0 z-50">
+      <div class="logo">
+        <!-- Logo de la empresa -->
+        <img
+          class="mono"
+          alt="Logo with a stylized monkey face"
+          style="background-color: #ffc843"
+          src="img/Group 39797.svg"
+        />
+        <img alt="Logo with a stylized monkey face" src="img/Layer_1.svg" />
+      </div>
+      <div class="redicc">
+        <a class="apply-button" href="#proyectos"> Solutions</a>
+        <a class="apply-button" href="#aliados"> Collaborators </a>
+        <a class="apply-button" href="#contactanos"> Contact Us </a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#carruselAcademias"> Proyectos </a>
+      <a href="#aliados"> Aliados </a>
+      <a href="#contactanos"> Contáctanos </a>
+    </div>
+
+    <!-- Sección de imágenes -->
+    <div class="imagenes">
+      <!-- Imagen principal -->
+      <img
+        src="img/Group 39958.png"
+        alt="Imagen Principal"
+        class="w-full h-auto mb-3"
+      />
+
+      <!-- Galería de imágenes en una cuadrícula -->
+      <div class="grid grid-cols-4 gap-2 mb-3">
+        <img
+          src="img/image 268.png"
+          alt="Imagen 1"
+          class="meteoro w-full border-2 border-black col-span-2"
+        />
+        <img
+          src="img/Group 39960.png"
+          alt="Imagen 2"
+          class="w-full h-auto col-span-1"
+        />
+        <img
+          src="img/Group 39959.png"
+          alt="Imagen 3"
+          class="w-full h-auto col-span-1"
+        />
+      </div>
+
+      <!-- Otras imágenes principales -->
+      <img
+        src="img/Group 39961.png"
+        alt="Imagen Principal 2"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39962.png"
+        alt="Imagen Principal 3"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39963.png"
+        alt="Imagen Principal 4"
+        class="w-full h-auto mb-3"
+      />
+
+      <!-- Otra cuadrícula con dos imágenes -->
+      <div class="grid grid-cols-2 gap-2">
+        <img src="img/Group 39965.png" alt="Imagen 1" class="w-full h-auto" />
+        <img
+          src="img/Group 39964.png"
+          alt="Imagen 2"
+          class="w-full h-auto mb-3"
+        />
+      </div>
+
+      <!-- Continuación de las imágenes principales -->
+      <img
+        src="img/Group 39966.png"
+        alt="Imagen Principal 5"
+        class="w-full h-auto mb-3"
+      />
+
+      <!-- Cuadrícula con imagenes laterales -->
+      <div class="grid grid-cols-2 gap-2">
+        <div>
+          <img
+            src="img/Group 39967.png"
+            alt="Imagen Izquierda"
+            class="w-full h-auto mb-3"
+          />
+        </div>
+        <div class="flex flex-col space-y-3">
+          <img
+            src="img/Group 39968.png"
+            alt="Imagen Derecha 1"
+            class="w-full h-auto"
+          />
+          <img
+            src="img/Group 39969.png"
+            alt="Imagen Derecha 2"
+            class="w-full h-auto mb-3"
+          />
+        </div>
+      </div>
+
+      <!-- Otra cuadrícula con dos imágenes -->
+      <div class="grid grid-cols-2 gap-2">
+        <img src="img/Group 39971.png" alt="Imagen 1" class="w-full h-auto" />
+        <img
+          src="img/Group 39970.png"
+          alt="Imagen 2"
+          class="w-full h-auto mb-3"
+        />
+      </div>
+
+      <!-- Más imágenes principales -->
+      <img
+        src="img/Group 39972.png"
+        alt="Imagen Principal 6"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39973.png"
+        alt="Imagen Principal 7"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39974.png"
+        alt="Imagen Principal 8"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39975.png"
+        alt="Imagen Principal 9"
+        class="w-full h-auto mb-3"
+      />
+
+      <!-- Última cuadrícula de imágenes -->
+      <div class="grid grid-cols-2 gap-2">
+        <img src="img/Group 39977.png" alt="Imagen 1" class="w-full h-auto" />
+        <img
+          src="img/Group 39976.png"
+          alt="Imagen 2"
+          class="w-full h-auto mb-3"
+        />
+      </div>
+
+      <!-- Últimas imágenes principales -->
+      <img
+        src="img/Group 39978.png"
+        alt="Imagen Principal 10"
+        class="w-full h-auto mb-3"
+      />
+      <img
+        src="img/Group 39979.png"
+        alt="Imagen Principal 11"
+        class="w-full h-auto mb-0"
+      />
+    </div>
+
+    <!-- Sección con dos boxes de contenido adicional -->
+    <div id="proyectos" class="seccion pc mb-4 mt-0">
+      <!-- Primer elemento -->
+      <div class="box">
+        <h2 class="title-minimal">LearnSIMON</h2>
+        <div class="text">
+          Create stunning video presentations and realistic avatars with ease. Harness the power of artificial intelligence with advanced text-to-speech and avatar generation capabilities to produce professional and engaging content in minutes.
+        </div>
+        <!--<a href="#" class="button">Ver más</a>-->
+      </div>
+
+      <!-- Segundo elemento -->
+      <div class="box">
+        <h2 class="title-minimal">QueryScribe</h2>
+        <div class="text">
+          Provides accurate and personalized answers through an AI-powered chat query system. Generates eBooks automatically and creates interactive quizzes with questions and answers.
+        </div>
+        <!--<a href="#" class="button">Ver más</a>-->
+      </div>
+
+      <!-- Tercer elemento -->
+      <div class="box">
+        <h2 class="title-minimal">Workflow Nexus</h2>
+        <div class="text">
+          Real-time information extraction driven by language models, able to retain relevant information for your information queries, adapted to the task you need, optimizing time and answers.
+        </div>
+        <!--<a href="#" class="button">Ver más</a>-->
+      </div>
+    </div>
+
+
+    <!-- Sección con dos boxes de contenido adicional para moviles -->
+
+    <div
+      id="carruselAcademias"
+      class="carousel movil slide"
+      data-bs-ride="carousel"
+    >
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carruselAcademias"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carruselAcademias"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carruselAcademias"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <!-- Elementos del carrusel para móvil -->
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <div class="box">
+      <h2 class="title-minimal">LearnSIMON</h2>
+      <div class="text">
+        Create stunning video presentations and realistic avatars with ease. Harness the power of artificial intelligence with advanced text-to-speech and avatar generation capabilities to produce professional and engaging content in minutes.
+        <p style="margin-bottom: 10%"></p>
+        <!--<a href="#" class="button btn btn-primary">Ver más</a>-->
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="box">
+      <h2 class="title-minimal">QueryScribe</h2>
+      <div class="text">
+        Provides accurate and personalized answers through an AI-powered chat query system. Generates eBooks automatically and creates interactive quizzes with questions and answers.
+        <p style="margin-bottom: 10%"></p>
+        <!--<a href="#" class="button btn btn-primary">Ver más</a>-->
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <div class="box">
+      <h2 class="title-minimal">Workflow Nexus</h2>
+      <div class="text">
+        Real-time information extraction driven by language models, able to retain relevant information for your information queries, adapted to the task you need, optimizing time and answers.
+        <p style="margin-bottom: 10%"></p>
+        <!--<a href="#" class="button btn btn-primary">Ver más</a>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Controles de navegación -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carruselAcademias"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carruselAcademias"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+    <section id="aliados">
+      <div class="colab">
+        <h1>COLLABORATORS</h1>
+      </div>
+      <div class="marcas">
+        <img src="Archivo\Group 39957.svg" alt="Thincrs" class="marca" />
+        <img src="Archivo\Group 40132.svg" alt="Vamos" class="marca" />
+        <img src="Archivo\Group.svg" alt="Robik" class="marca" />
+        <!--<img src="img/kueski.svg" alt="microsoft" class="marca" />-->
+        <div class="separador"></div>
+        <img src="Archivo\Group 40131.svg" alt="microsoft" class="marca" />
+        <!--<img src="img/webflow.svg" alt="microsoft" class="marca" />-->
+        <!--<img src="img/intel.svg" alt="microsoft" class="marca" />-->
+        <!--<img src="img/udemy.svg" alt="microsoft" class="marca" />-->
+      </div>
+    </section>
+    <!-- Pie de página -->
+    <footer
+      id="contactanos"
+      class="w-full full-height bg-gray-800 text-white py-6 flex items-center"
+    >
+      <div
+        class="grid grid-cols-2 gap-0 p-14 items-center justify-center w-full"
+      >
+        <div class="flex1 pl-12 w-full">
+          <p class="text2 mb-4">
+            Partnering on impactful technological ventures
+            <span class="that font-bold">that drive the development</span>
+            of individual and collective awareness for
+          </p>
+
+          <p class="text1 leading-none font-bold mb-4">
+            A BETTER LIFE AND<br />
+            <span class="text-yellow-500" style="color: #ffc843"
+              >HUMAN UNITY</span
+            >
+          </p>
+
+          <p class="text mb-4">SmartApe. All rights reserved. © 2023.</p>
+
+          <!-- Iconos de redes sociales -->
+          <div class="flex grid-cols-3 gap-20">
+            <img src="img/facebook.svg" alt="Facebook" class="w-10 h-auto" />
+            <img src="img/instagram.svg" alt="Instagram" class="w-10 h-auto" />
+            <img src="img/linkedin.svg" alt="Linkedin" class="w-10 h-auto" />
+          </div>
+
+          <p class="text mb-4" style="margin-top: 2%">
+            Contact Us: <a>hola@smartape.ai</a>
+          </p>
+        </div>
+
+        <!-- Imagen grande del pie de página -->
+        <div class="ml-auto">
+          <img
+            src="img/Group 39798.svg"
+            alt="Imagen Derecha Grande"
+            class="mono h-auto"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Animación de scroll horizontal en la sección de boxes
+      let boxes = gsap.utils.toArray(".box");
+      let scrollTween = gsap.to(boxes, {
+        xPercent: -20 * (boxes.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".seccion",
+          pin: true,
+          scrub: 0.1,
+          end: "+=1000", // Ajusta la longitud del scroll
+        },
+      });
+
+      // Desactiva el scrollTrigger en pantallas menores a 768px
+      gsap.matchMedia().add("(max-width: 767px)", () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill()); // Esto mata cualquier animación GSAP activa en móviles
+      });
+
+      function toggleMenu() {
+        var menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("show-menu");
+      }
+
+      // Seleccionar todos los enlaces dentro del menú móvil
+      var mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
+
+      // Agregar un evento de clic a cada enlace
+      mobileMenuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          // Llama a toggleMenu para cerrar el menú cuando se selecciona una opción
+          toggleMenu();
+        });
+      });
+    </script>
+  </body>
+</html>
