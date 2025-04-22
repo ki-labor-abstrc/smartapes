@@ -153,69 +153,102 @@ header {
 /********************************************************************
 Seccion para abajo y footer
 ********************************************************************/
-/* Contenedor general */
-.seccion {
+/* Estilos para el carrusel de PC */
+.carrusel-pc {
+    background-color: #000000;
+    min-height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+  }
+  
+  .carrusel-pc .carousel {
     width: 100%;
-    height: 100vh;
-    /* Ajusta según el alto que desees */
-    padding: 0 4rem;
-    overflow: hidden;
-}
-
-/* Cada "slide" o caja */
-.box {
-    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carrusel-pc .carousel-inner {
+    overflow: visible;
+  }
+  
+  .carrusel-pc .carousel-item {
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .carrusel-pc .box {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 50%;
-    background-color: #000000;
-    /* Fondo negro */
-    color: #ffffff;
-    /* Texto blanco */
-    margin-right: 16px;
-    padding: 0 2rem;
-}
-
-/* Título minimalista */
-.title-minimal {
+    min-height: 70vh;
+    border-radius: 8px;
+  }
+  
+  .carrusel-pc .title-minimal {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 3rem;
-    
-    
-}
-
-/* Texto descriptivo */
-.text {
-    margin-bottom: 4rem;
-    font-size: 1rem;
-    width: 80%;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-/* Botón */
-.button {
-    display: inline-block;
-    padding: 10px 50px;
-    color: #ffffff;
-    background-color: #000000;
-    border: 2px solid #ffffff;
     text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem;
-    width: 50%;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
+  }
+  
+  .carrusel-pc .text {
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  /* Control de visibilidad: ocultar en móvil, mostrar en PC */
+  @media (max-width: 768px) {
+    .carrusel-pc {
+      display: none;
+    }
+  }
+  
+  /* Estilos para los botones de navegación */
+  .carrusel-pc .carousel-control-prev,
+  .carrusel-pc .carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+  }
+  
+  .carrusel-pc .carousel-control-prev-icon,
+  .carrusel-pc .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 1.5rem;
+  }
+  
+  /* Indicadores más visibles */
+  .carrusel-pc .carousel-indicators {
+    bottom: -50px;
+  }
+  
+  .carrusel-pc .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #555;
+    opacity: 0.5;
+  }
+  
+  .carrusel-pc .carousel-indicators button.active {
+    background-color: #fff;
+    opacity: 1;
+  }
+  
+  /* Ocultar la sección original con scroll horizontal */
+  .seccion.pc {
+    display: none;
+  }
 
 .movil {
     display: none;
@@ -228,7 +261,8 @@ Seccion para abajo y footer
         padding-top: 5rem;
         padding-bottom: 5rem;
         width: 100%;
-        height: 70vh;
+        height: auto;
+        min-height: 100vh;
         padding-left: 2rem;
         padding-right: 2rem;
         display: flex;
@@ -239,6 +273,12 @@ Seccion para abajo y footer
         /* Fondo negro */
         color: #ffffff;
         /* Texto blanco */
+    }
+
+    carousel-inner,
+    .carousel-item {
+        height: auto !important;
+        overflow: visible;
     }
 
     /* Título minimalista */
