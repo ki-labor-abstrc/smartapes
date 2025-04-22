@@ -156,11 +156,13 @@ Seccion para abajo y footer
 /* Contenedor general */
 .seccion {
     display: flex;
-    width: 100%;
+    width: fit-content; /* Ancho automático según contenido */
+    min-width: 100%;
     height: 100vh;
-    /* Ajusta según el alto que desees */
+    overflow-x: auto; /* Permite scroll horizontal */
+    overflow-y: hidden;
     padding: 0 4rem;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Cada "slide" o caja */
@@ -172,9 +174,7 @@ Seccion para abajo y footer
     align-items: center;
     min-width: 50%;
     background-color: #000000;
-    /* Fondo negro */
     color: #ffffff;
-    /* Texto blanco */
     margin-right: 16px;
     padding: 0 2rem;
 }
@@ -228,7 +228,8 @@ Seccion para abajo y footer
         padding-top: 5rem;
         padding-bottom: 5rem;
         width: 100%;
-        height: 70vh;
+        height: auto;
+        min-height: 100vh;
         padding-left: 2rem;
         padding-right: 2rem;
         display: flex;
@@ -239,6 +240,12 @@ Seccion para abajo y footer
         /* Fondo negro */
         color: #ffffff;
         /* Texto blanco */
+    }
+
+    carousel-inner,
+    .carousel-item {
+        height: auto !important;
+        overflow: visible;
     }
 
     /* Título minimalista */
