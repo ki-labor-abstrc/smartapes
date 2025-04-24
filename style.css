@@ -153,178 +153,252 @@ header {
 /********************************************************************
 Seccion para abajo y footer
 ********************************************************************/
-/* Estilos para el carrusel de PC */
-.carrusel-pc {
-    background-color: #000000;
+/* Estilos para la navegación por scroll */
+.carrusel-pc-container {
+    background-color: #ffffff;
     min-height: 100vh;
+    position: relative;
+    overflow: visible !important;
+    padding: 3rem 0;
+  }
+  
+  .scroll-sections-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .scroll-section {
+    width: 100%;
+    height: 100vh; /* Altura completa de la ventana */
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #section1 {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-section.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .dual-box-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+  
+  .single-item {
+    justify-content: center;
+  }
+  
+  .box-pc {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 4rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Cambiado de flex-start */
+    align-items: flex-start; /* Cambiado de center para que coincida con la alineación izquierda */
+    min-height: 60vh;
+    max-width: 650px;
+    width: 50%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255,255,255,0.3);
     box-sizing: border-box;
   }
+
+  .box-pc:hover {
+    transform: translateY(-5px);
+}
+
   
-  .carrusel-pc .carousel {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  .box-pc-center {
+    width: 70%;
+    align-items: flex-start; /* Asegurando que también esté alineado a la izquierda */
   }
   
-  .carrusel-pc .carousel-inner {
+  .box-pc-left {
+    border-left: 3px solid #ffc843;
+  }
+  
+  .box-pc-right {
+    border-right: 3px solid #ffc843;
+  }
+  
+  .box-pc-center {
+    border-left: 3px solid #ffc843;
+    border-right: 3px solid #ffc843;
+  }
+  
+  /* Indicadores de sección */
+  .section-indicators {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #ffc843;
+    transform: scale(1.2);
+  }
+  
+  .title-pc {
+    font-size: 2.8rem; /* Aumentado de 2rem */
+    font-weight: 900;
+    margin-bottom: 1.8rem;
+    text-align: left; /* Cambiado de center */
+    width: 100%;
+    padding: 0 15px;
+    line-height: 1.1;
+  }
+
+
+  
+  /* Visibilidad del carrusel PC: visible en desktop, oculto en móvil */
+  .carrusel-pc-container {
+    display: block !important;
+  }
+  
+  @media (max-width: 768px) {
+    .carrusel-pc-container {
+      display: none !important;
+    }
+  }
+  
+  /* ===== ESTILOS CARRUSEL MÓVIL ===== */
+  .carrusel-movil-container {
+    background-color: #000000;
+    width: 100%;
+  }
+  
+  .carrusel-movil {
+    width: 100%;
+  }
+  
+  .carousel-inner-movil {
     overflow: visible;
   }
   
-  .carrusel-pc .carousel-item {
-    transition: transform 0.6s ease-in-out;
-  }
-  
-  .carrusel-pc .box {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 3rem;
+  .carousel-item .box-movil {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
-    border-radius: 8px;
+    background-color: #000000;
+    color: #ffffff;
   }
   
-  .carrusel-pc .title-minimal {
+  .title-movil {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 3rem;
     text-align: center;
   }
   
-  .carrusel-pc .text {
-    font-size: 1.1rem;
-    width: 80%;
-    margin: 0 auto;
-    line-height: 1.5;
+  .text-movil {
     text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    max-width: 80%;
+    line-height: 1.5;
   }
   
-  /* Control de visibilidad: ocultar en móvil, mostrar en PC */
-  @media (max-width: 768px) {
-    .carrusel-pc {
-      display: none;
-    }
-  }
-  
-  /* Estilos para los botones de navegación */
-  .carrusel-pc .carousel-control-prev,
-  .carrusel-pc .carousel-control-next {
-    width: 5%;
+  .carousel-control-movil-prev,
+  .carousel-control-movil-next {
+    width: 10%;
     opacity: 0.8;
   }
   
-  .carrusel-pc .carousel-control-prev-icon,
-  .carrusel-pc .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 1.5rem;
+  .carousel-indicators-movil {
+    bottom: 20px;
   }
   
-  /* Indicadores más visibles */
-  .carrusel-pc .carousel-indicators {
-    bottom: -50px;
-  }
-  
-  .carrusel-pc .carousel-indicators button {
-    width: 12px;
-    height: 12px;
+  .carousel-indicators-movil button {
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 4px;
     background-color: #555;
     opacity: 0.5;
   }
   
-  .carrusel-pc .carousel-indicators button.active {
+  .carousel-indicators-movil button.active {
     background-color: #fff;
     opacity: 1;
   }
-  
-  /* Ocultar la sección original con scroll horizontal */
-  .seccion.pc {
-    display: none;
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    .title-pc {
+      font-size: 2.2rem; /* Aumentado de 1.8rem */
+      margin-bottom: 2rem;
+    }
+    
+    .text-pc {
+      font-size: 1.1rem; /* Aumentado de 0.9rem */
+      line-height: 1.7;
+    }
   }
-
-.movil {
-    display: none;
-}
-
-@media (max-width: 768px) {
-
-    /* Caja de cada slide */
-    .box {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        width: 100%;
-        height: auto;
-        min-height: 100vh;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #000000;
-        /* Fondo negro */
-        color: #ffffff;
-        /* Texto blanco */
+  
+  /* ===== CONTROL DE VISIBILIDAD PARA AMBOS CARRUSELES ===== */
+  /* Estos estilos deben estar al final del archivo CSS para tener prioridad */
+  
+  /* Visibilidad del carrusel PC: visible en desktop, oculto en móvil */
+  .carrusel-pc-container {
+    display: flex !important;
+  }
+  
+  @media (max-width: 768px) {
+    .carrusel-pc-container {
+      display: none !important;
     }
-
-    carousel-inner,
-    .carousel-item {
-        height: auto !important;
-        overflow: visible;
+  }
+  
+  /* Visibilidad del carrusel móvil: oculto en desktop, visible en móvil */
+  .carrusel-movil-container {
+    display: none !important;
+  }
+  
+  @media (max-width: 768px) {
+    .carrusel-movil-container {
+      display: block !important;
     }
-
-    /* Título minimalista */
-    .title-minimal {
-        font-size: 2.5rem;
-        font-weight: 900;
-        margin-bottom: 3rem;
-    }
-
-    /* Texto descriptivo */
-    .text {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1.1rem !important;
-        max-width: 80%;
-        line-height: 1.5;
-        
-    }
-
-    /* Botón */
-    .button {
-        display: inline-block;
-        padding: 10px 50px;
-        color: #ffffff;
-        background-color: #000000;
-        border: 2px solid #ffffff;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        font-size: 1rem;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-
-    .button:hover {
-        background-color: #ffffff;
-        color: #000000;
-    }
-
-    .pc {
-        display: none;
-    }
-
-    .movil {
-        display: block;
-    }
-}
+  }
 
 /*
 seccion nueva
@@ -343,92 +417,132 @@ section {
     /* Centra horizontalmente el contenido */
 }
 
-section .colab h1 {
-    font-size: 10rem;
+section .colab {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  section .colab h1 {
+    font-size: 8rem;
     font-weight: bold;
     color: #E5E5E5;
-}
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: -2px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Ajustes para tablets */
+  @media (max-width: 1024px) {
+    section .colab h1 {
+      font-size: 6rem;
+    }
+  }
+  
+  /* Ajustes para móviles */
+  @media (max-width: 768px) {
+    section .colab h1 {
+      font-size: 3rem;
+      letter-spacing: -1px;
+    }
+    
+    section .colab {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas */
+  @media (max-width: 375px) {
+    section .colab h1 {
+      font-size: 2.5rem;
+    }
+  }
 
-.marcas {
+.marcas-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .marcas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+  
+  .marca-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Espacio entre elementos en cada fila */
     align-items: center;
-    /* Alinea verticalmente los logos */
-    gap: 20px;
-    /* Espacio entre cada logo */
-    padding: 6%;
-}
-
-.marca {
-
-    text-align: start;
-    /* Centrar el logo */
-    width: auto;
-    /* Ancho máximo del logo para que no se estire demasiado */
-}
-
-.separador {
-    flex-basis: 100%;
-    /* Ocupa toda la fila */
-    height: 0;
-    /* No tiene altura visual */
-    margin-bottom: 20px;
-    /* Espacio entre filas */
-}
-
-@media (max-width: 1024px) {
-    section .colab h1 {
-        font-size: 6rem;
-        font-weight: bold;
-        color: #E5E5E5;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
-    section {
-        height: 60vh;
-    }
-
-    section .colab h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #E5E5E5;
-    }
-
+  }
+  
+  .left-side {
+    justify-content: flex-end;
+    padding-right: 10%;
+  }
+  
+  .right-side {
+    justify-content: flex-start;
+    padding-left: 10%;
+  }
+  
+  .marca {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .marca:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ajustes para tablet */
+  @media (max-width: 1024px) {
     .marcas {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        /* Espacio entre elementos en cada fila */
-        align-items: center;
-        /* Alinea verticalmente los logos */
-        gap: 20px;
-        /* Espacio entre cada logo */
-        padding: 6%;
+      gap: 30px;
     }
-
+    
     .marca {
-
-        text-align: start;
-        /* Centrar el logo */
-        width: 4rem;
-        /* Ancho máximo del logo para que no se estire demasiado */
+      max-width: 120px;
     }
-
-    .separador {
-        flex-basis: 100%;
-        /* Ocupa toda la fila */
-        height: 0;
-        /* No tiene altura visual */
-        margin-bottom: -15%;
-        /* Espacio entre filas */
+  }
+  
+  /* Ajustes para móvil */
+  @media (max-width: 768px) {
+    section {
+      height: auto;
+      padding: 40px 0;
     }
-}
+    
+    .marcas {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 15px;
+    }
+    
+    .marca {
+      max-width: 80px;
+    }
+    
+    .left-side, .right-side {
+      padding: 0;
+    }
+    
+    .left-side {
+      justify-content: center;
+    }
+    
+    .right-side {
+      justify-content: center;
+    }
+  }
 
 /* footer*/
 .full-height {

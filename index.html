@@ -52,7 +52,7 @@
         <img alt="Logo with a stylized monkey face" src="img/Layer_1.svg" />
       </div>
       <div class="redicc">
-        <a class="apply-button" href="#proyectos"> Solutions</a>
+        <a class="apply-button" href="#proyectos-pc"> Solutions</a>
         <a class="apply-button" href="#aliados"> Collaborators </a>
         <a class="apply-button" href="#contactanos"> Contact Us </a>
       </div>
@@ -60,9 +60,9 @@
     </header>
 
     <div id="mobileMenu" class="mobile-menu">
-      <a href="#carruselAcademias"> Proyectos </a>
-      <a href="#aliados"> Aliados </a>
-      <a href="#contactanos"> Contáctanos </a>
+      <a href="#proyectos-movil"> Solutions </a>
+      <a href="#aliados"> Collaborators </a>
+      <a href="#contactanos"> Contact Us </a>
     </div>
 
     <!-- Sección de imágenes -->
@@ -205,195 +205,156 @@
       />
     </div>
 
-<!-- Reemplazar la sección actual de boxes con un carrusel de Bootstrap -->
-<div id="proyectos" class="carrusel-pc mb-4 mt-0">
-  <!-- Carrusel de Bootstrap para PC -->
-  <div id="carruselPC" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicadores -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carruselPC" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carruselPC" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carruselPC" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carruselPC" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carruselPC" data-bs-slide-to="4" aria-label="Slide 5"></button>
+<!-- Sección para Scroll Trigger en PC -->
+<div id="proyectos-pc" class="carrusel-pc-container">
+  <div class="scroll-sections-container">
+    <!-- Sección 1 -->
+    <div class="scroll-section" id="section1">
+      <div class="dual-box-container">
+        <div class="box box-pc box-pc-left">
+          <h2 class="title-minimal title-pc">RAG: Real-Backed Answers</h2>
+          <div class="text text-pc">
+            Enhance the accuracy of your AI with responses based on your own data. RAG (Retrieval-Augmented Generation) combines the power of natural language with real-time retrieval of relevant information. Perfect for virtual assistants, help centers, and internal systems that need to speak with facts.
+          </div>
+        </div>
+        <div class="box box-pc box-pc-right">
+          <h2 class="title-minimal title-pc">Intelligent Agents: Automation That Thinks</h2>
+          <div class="text text-pc">
+            More than a chatbot: a digital collaborator. Our intelligent agents can understand, decide, and execute complex tasks on their own, integrating with your systems and workflows. Operational efficiency and 24/7 service without losing the human touch.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección 2 -->
+    <div class="scroll-section" id="section2">
+      <div class="dual-box-container">
+        <div class="box box-pc box-pc-left">
+          <h2 class="title-minimal title-pc">MCP: Connect Your AI to Your Systems in Seconds</h2>
+          <div class="text text-pc">
+            Let your AI assistant interact with your tools, files, and APIs—without complex integrations. MCP (Model Context Protocol) enables secure and flexible connections so your AI can act with real knowledge and context. Access what you need, when you need it.
+          </div>
+        </div>
+        <div class="box box-pc box-pc-right">
+          <h2 class="title-minimal title-pc">LangGraph: Smart and Adaptable Workflows</h2>
+          <div class="text text-pc">
+            Build conversational experiences that adjust in real time. LangGraph allows you to design dynamic flows where your AI can loop steps, make decisions, or adapt to changing scenarios. Ideal for complex processes, tech support, or customized solutions.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección 3 -->
+    <div class="scroll-section" id="section3">
+      <div class="dual-box-container single-item">
+        <div class="box box-pc box-pc-center">
+          <h2 class="title-minimal title-pc">CAG: Human-Sounding Conversational Responses</h2>
+          <div class="text text-pc">
+            Make your AI not just understand—but talk like a person. With CAG, your virtual assistants respond naturally, with empathy and fluency—all based on the context they already have.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navegación por puntos -->
+    <div class="section-indicators">
+      <div class="indicator active" data-section="section1"></div>
+      <div class="indicator" data-section="section2"></div>
+      <div class="indicator" data-section="section3"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CARRUSEL MÓVIL: Solo visible en dispositivos móviles -->
+<div id="proyectos-movil" class="carrusel-movil-container">
+  <div id="carruselMovil" class="carousel slide carrusel-movil" data-bs-ride="carousel">
+    <!-- Indicadores móvil -->
+    <div class="carousel-indicators carousel-indicators-movil">
+      <button type="button" data-bs-target="#carruselMovil" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carruselMovil" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carruselMovil" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carruselMovil" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carruselMovil" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
 
-    <!-- Elementos del carrusel -->
-    <div class="carousel-inner">
+    <!-- Elementos del carrusel móvil -->
+    <div class="carousel-inner carousel-inner-movil">
       <div class="carousel-item active">
-        <div class="box">
-          <h2 class="title-minimal">RAG: Real-Backed Answers</h2>
-          <div class="text">
+        <div class="box box-movil">
+          <h2 class="title-minimal title-movil">RAG: Real-Backed Answers</h2>
+          <div class="text text-movil">
             Enhance the accuracy of your AI with responses based on your own data. RAG (Retrieval-Augmented Generation) combines the power of natural language with real-time retrieval of relevant information. Perfect for virtual assistants, help centers, and internal systems that need to speak with facts.
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <div class="box">
-          <h2 class="title-minimal">Intelligent Agents: Automation That Thinks</h2>
-          <div class="text">
+        <div class="box box-movil">
+          <h2 class="title-minimal title-movil">Intelligent Agents: Automation That Thinks</h2>
+          <div class="text text-movil">
             More than a chatbot: a digital collaborator. Our intelligent agents can understand, decide, and execute complex tasks on their own, integrating with your systems and workflows. Operational efficiency and 24/7 service without losing the human touch.
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <div class="box">
-          <h2 class="title-minimal">MCP: Connect Your AI to Your Systems in Seconds</h2>
-          <div class="text">
+        <div class="box box-movil">
+          <h2 class="title-minimal title-movil">MCP: Connect Your AI to Your Systems in Seconds</h2>
+          <div class="text text-movil">
             Let your AI assistant interact with your tools, files, and APIs—without complex integrations. MCP (Model Context Protocol) enables secure and flexible connections so your AI can act with real knowledge and context. Access what you need, when you need it.
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <div class="box">
-          <h2 class="title-minimal">LangGraph: Smart and Adaptable Workflows</h2>
-          <div class="text">
+        <div class="box box-movil">
+          <h2 class="title-minimal title-movil">LangGraph: Smart and Adaptable Workflows</h2>
+          <div class="text text-movil">
             Build conversational experiences that adjust in real time. LangGraph allows you to design dynamic flows where your AI can loop steps, make decisions, or adapt to changing scenarios. Ideal for complex processes, tech support, or customized solutions.
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <div class="box">
-          <h2 class="title-minimal">CAG: Human-Sounding Conversational Responses</h2>
-          <div class="text">
+        <div class="box box-movil">
+          <h2 class="title-minimal title-movil">CAG: Human-Sounding Conversational Responses</h2>
+          <div class="text text-movil">
             Make your AI not just understand—but talk like a person. With CAG, your virtual assistants respond naturally, with empathy and fluency—all based on the context they already have.
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Controles de navegación -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carruselPC" data-bs-slide="prev">
+    <!-- Controles de navegación móvil -->
+    <button class="carousel-control-prev carousel-control-movil-prev" type="button" data-bs-target="#carruselMovil" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carruselPC" data-bs-slide="next">
+    <button class="carousel-control-next carousel-control-movil-next" type="button" data-bs-target="#carruselMovil" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Siguiente</span>
     </button>
   </div>
 </div>
 
-    <!-- Sección con dos boxes de contenido adicional para moviles -->
 
-<div id="carruselAcademias" class="carousel movil slide" data-bs-ride="carousel">
-  <!-- Indicadores -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carruselAcademias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carruselAcademias" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carruselAcademias" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carruselAcademias" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carruselAcademias" data-bs-slide-to="4" aria-label="Slide 5"></button>
-  </div>
-
-  <!-- Elementos del carrusel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="box">
-        <h2 class="title-minimal">RAG: Real-Backed Answers</h2>
-        <div class="text">
-          Enhance the accuracy of your AI with responses based on your own data. RAG (Retrieval-Augmented Generation) combines the power of natural language with real-time retrieval of relevant information. Perfect for virtual assistants, help centers, and internal systems that need to speak with facts.
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="box">
-        <h2 class="title-minimal">Intelligent Agents: Automation That Thinks</h2>
-        <div class="text">
-          More than a chatbot: a digital collaborator. Our intelligent agents can understand, decide, and execute complex tasks on their own, integrating with your systems and workflows. Operational efficiency and 24/7 service without losing the human touch.
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="box">
-        <h2 class="title-minimal">MCP: Connect Your AI to Your Systems in Seconds</h2>
-        <div class="text">
-          Let your AI assistant interact with your tools, files, and APIs—without complex integrations. MCP (Model Context Protocol) enables secure and flexible connections so your AI can act with real knowledge and context. Access what you need, when you need it.
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="box">
-        <h2 class="title-minimal">LangGraph: Smart and Adaptable Workflows</h2>
-        <div class="text">
-          Build conversational experiences that adjust in real time. LangGraph allows you to design dynamic flows where your AI can loop steps, make decisions, or adapt to changing scenarios. Ideal for complex processes, tech support, or customized solutions.
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="box">
-        <h2 class="title-minimal">CAG: Human-Sounding Conversational Responses</h2>
-        <div class="text">
-          Make your AI not just understand—but talk like a person. With CAG, your virtual assistants respond naturally, with empathy and fluency—all based on the context they already have.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      <!-- Elementos del carrusel para móvil -->
-<div class="carousel-inner">
-
-  <div class="carousel-item">
-    <div class="box">
-      <h2 class="title-minimal">QueryScribe</h2>
-      <div class="text">
-        Provides accurate and personalized answers through an AI-powered chat query system. Generates eBooks automatically and creates interactive quizzes with questions and answers.
-        <p style="margin-bottom: 10%"></p>
-        <!--<a href="#" class="button btn btn-primary">Ver más</a>-->
-      </div>
-    </div>
-  </div>
-  <div class="carousel-item">
-    <div class="box">
-      <h2 class="title-minimal">Workflow Nexus</h2>
-      <div class="text">
-        Real-time information extraction driven by language models, able to retain relevant information for your information queries, adapted to the task you need, optimizing time and answers.
-        <p style="margin-bottom: 10%"></p>
-        <!--<a href="#" class="button btn btn-primary">Ver más</a>-->
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      <!-- Controles de navegación -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carruselAcademias"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carruselAcademias"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </div>
     <section id="aliados">
-      <div class="colab">
-        <h1>COLLABORATORS</h1>
-      </div>
-      <div class="marcas">
-        <img src="Archivo\Group 39957.svg" alt="Thincrs" class="marca" />
-        <img src="Archivo\Group 40132.svg" alt="Vamos" class="marca" />
-        <img src="Archivo\Group.svg" alt="Robik" class="marca" />
-        <!--<img src="img/kueski.svg" alt="microsoft" class="marca" />-->
-        <div class="separador"></div>
-        <img src="Archivo\Group 40131.svg" alt="microsoft" class="marca" />
-        <!--<img src="img/webflow.svg" alt="microsoft" class="marca" />-->
-        <!--<img src="img/intel.svg" alt="microsoft" class="marca" />-->
-        <!--<img src="img/udemy.svg" alt="microsoft" class="marca" />-->
-      </div>
-    </section>
+        <div class="colab">
+          <h1>COLLABORATORS</h1>
+        </div>
+        <div class="marcas-container">
+          <div class="marcas">
+            <div class="marca-wrapper left-side">
+              <img src="Archivo\Group 39957.svg" alt="Thincrs" class="marca" />
+            </div>
+            <div class="marca-wrapper left-side">
+              <img src="Archivo\Group 40132.svg" alt="Vamos" class="marca" />
+            </div>
+            <div class="marca-wrapper right-side">
+              <img src="Archivo\Group.svg" alt="Robik" class="marca" />
+            </div>
+            <div class="marca-wrapper right-side">
+              <img src="Archivo\Group 40131.svg" alt="microsoft" class="marca" />
+            </div>
+          </div>
+        </div>
+      </section>
     <!-- Pie de página -->
     <footer
       id="contactanos"
@@ -448,46 +409,158 @@
     <script>
       
       // Solo mantenemos la funcionalidad del menú móvil
-function toggleMenu() {
-  var menu = document.getElementById("mobileMenu");
-  menu.classList.toggle("show-menu");
+      document.addEventListener('DOMContentLoaded', function() {
+  // Inicialización del carrusel móvil (sin cambios)
+        var carouselMovil = document.getElementById('carruselMovil');
+        if (carouselMovil) {
+          var carouselMovilInstance = new bootstrap.Carousel(carouselMovil, {
+            interval: 5000,
+            wrap: true,
+            keyboard: true,
+            pause: 'hover'
+          });
+        }
+        
+        // Inicializar GSAP ScrollTrigger para PC
+        if (window.innerWidth > 768) {
+          initScrollTrigger();
+        }
+        
+        // Escuchar cambios de tamaño de ventana
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 768) {
+            initScrollTrigger();
+          }
+        });
+      });
+
+      function initScrollTrigger() {
+        // Limpiamos cualquier ScrollTrigger existente
+        ScrollTrigger.getAll().forEach(st => st.kill());
+        
+        // Obtenemos las secciones y el contenedor
+        const sections = document.querySelectorAll('.scroll-section');
+        const container = document.querySelector('.carrusel-pc-container');
+        
+        // Estado inicial
+        gsap.set(sections[0], { opacity: 1, visibility: 'visible', x: 0 });
+        gsap.set(sections[1], { opacity: 0, visibility: 'hidden', x: 100 });
+        gsap.set(sections[2], { opacity: 0, visibility: 'hidden', x: 100 });
+        // Timeline para controlar mejor las transiciones
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: container,
+            start: "top top",
+            end: "+=500%", // Mucho más espacio para todas las transiciones
+            pin: true,
+            scrub: 1, // Valor suavizado para mejor control
+            markers: false,
+            anticipatePin: 1,
+            pinSpacing: true
+          }
+        });
+        
+        // Añadimos las animaciones a la timeline
+        // Primera transición (del primer al segundo slide)
+        tl.to(sections[0], { opacity: 0, visibility: 'hidden', x: -100, duration: 0.7 }, 0.5)
+          .to(sections[1], { opacity: 1, visibility: 'visible', x: 0, duration: 0.7 }, 0.5)
+          
+          // Espacio para ver el segundo slide
+          .addLabel("midPoint", "+=0.5")
+          
+          // Segunda transición (del segundo al tercer slide)
+          .to(sections[1], { opacity: 0, visibility: 'hidden', x: -100, duration: 0.7 }, "midPoint")
+          .to(sections[2], { opacity: 1, visibility: 'visible', x: 0, duration: 0.7 }, "midPoint")
+          
+          // Espacio importante para ver el tercer slide antes de continuar
+          .addLabel("lastSlide", "+=1.5");
+        
+        // Actualizar los indicadores según la posición del scroll
+        ScrollTrigger.create({
+          trigger: container,
+          start: "top top",
+          end: "+=500%",
+          onUpdate: self => {
+            // Determinamos qué sección mostrar basado en el progreso
+            const progress = self.progress;
+            if (progress < 0.25) {
+              updateIndicators("section1");
+            } else if (progress < 0.6) {
+              updateIndicators("section2");
+            } else {
+              updateIndicators("section3");
+            }
+          }
+        });
+        
+        // Configuramos los indicadores laterales para navegación directa
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', function() {
+            // Obtenemos la sección objetivo
+            const targetSectionId = this.getAttribute('data-section');
+            
+            // Posición de scroll según la sección
+            let scrollPosition;
+            if (targetSectionId === "section1") {
+              scrollPosition = container.offsetTop;
+            } else if (targetSectionId === "section2") {
+              scrollPosition = container.offsetTop + window.innerHeight;
+            } else {
+              scrollPosition = container.offsetTop + (window.innerHeight * 2);
+            }
+            
+            // Scrolleamos a esa posición
+            window.scrollTo({
+              top: scrollPosition,
+              behavior: 'smooth'
+            });
+          });
+        });
+      }
+
+      function updateIndicators(activeId) {
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach(indicator => {
+          if (indicator.getAttribute('data-section') === activeId) {
+            indicator.classList.add('active');
+          } else {
+            indicator.classList.remove('active');
+          }
+        });
+
+
+
+    // Inicialización del carrusel móvil
+    var carouselMovil = document.getElementById('carruselMovil');
+    if (carouselMovil) {
+        var carouselMovilInstance = new bootstrap.Carousel(carouselMovil, {
+            interval: 5000,
+            wrap: true,
+            keyboard: true,
+            pause: 'hover'
+        });
+    }
 }
 
-// Seleccionar todos los enlaces dentro del menú móvil
-var mobileMenuLinks = document.querySelectorAll("#mobileMenu a");
+// Esta función se mantiene igual, abre y cierra menú
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('show-menu');
+}
 
-// Agregar un evento de clic a cada enlace
-mobileMenuLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    // Llama a toggleMenu para cerrar el menú cuando se selecciona una opción
-    toggleMenu();
+// Añade esta nueva funcionalidad para cerrar el menú al hacer clic en cualquier enlace dentro del menú móvil
+document.addEventListener('DOMContentLoaded', function() {
+  const menuLinks = document.querySelectorAll('#mobileMenu a');
+
+  menuLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.remove('show-menu');
+    });
   });
 });
 
-// Inicializar el carrusel de Bootstrap (aunque Bootstrap lo hace automáticamente,
-// esto asegura que tenga la configuración que queremos)
-document.addEventListener('DOMContentLoaded', function() {
-  var carouselPC = document.getElementById('carruselPC');
-  if (carouselPC) {
-    var carousel = new bootstrap.Carousel(carouselPC, {
-      interval: 5000, // Tiempo entre transiciones automáticas (5 segundos)
-      wrap: true,     // Vuelve al principio cuando llega al final
-      keyboard: true, // Permite control con teclado
-      pause: 'hover'  // Pausa al pasar el ratón por encima
-    });
-  }
-  
-  // También inicializamos el carrusel móvil con la misma configuración
-  var carouselMobile = document.getElementById('carruselAcademias');
-  if (carouselMobile) {
-    var carouselMob = new bootstrap.Carousel(carouselMobile, {
-      interval: 5000,
-      wrap: true,
-      keyboard: true,
-      pause: 'hover'
-    });
-  }
-});
+
     </script>
   </body>
 </html>
