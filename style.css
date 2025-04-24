@@ -329,6 +329,8 @@ proyectos-pc {
     align-items: center;
     background-color: #000000;
     color: #ffffff;
+    transition: transform 0.5s ease;
+    backface-visibility: visible;
   }
   
   .title-movil {
