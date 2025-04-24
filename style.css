@@ -154,6 +154,13 @@ header {
 Seccion para abajo y footer
 ********************************************************************/
 /* Estilos para la navegación por scroll */
+
+proyectos-pc {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* altura mínima del viewport */
+    background-color: #ffffff; /* fondo blanco para que no se note el vacío */
+  }
 .carrusel-pc-container {
     background-color: #ffffff;
     min-height: 100vh;

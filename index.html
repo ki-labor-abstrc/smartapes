@@ -441,51 +441,50 @@
         // Obtenemos las secciones y el contenedor
         const sections = document.querySelectorAll('.scroll-section');
         const container = document.querySelector('.carrusel-pc-container');
+        const wrapper = document.querySelector('#proyectos-pc');
         
         // Estado inicial
         gsap.set(sections[0], { opacity: 1, visibility: 'visible', x: 0 });
-        gsap.set(sections[1], { opacity: 0, visibility: 'hidden', x: 100 });
-        gsap.set(sections[2], { opacity: 0, visibility: 'hidden', x: 100 });
+        gsap.set([sections[1], sections[2]], { opacity: 0, visibility: 'hidden', x: 100 });
         // Timeline para controlar mejor las transiciones
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: "+=500%", // Mucho más espacio para todas las transiciones
-            pin: true,
-            scrub: 1, // Valor suavizado para mejor control
-            markers: false,
-            anticipatePin: 1,
-            pinSpacing: true
-          }
+          trigger: wrapper,
+          start: "top top",  // <<--- Cambio clave aquí
+          end: "+=200%",        // Opcionalmente ajustado según tu contenido
+          pin: container,
+          scrub: 1,
+          markers: false,
+          anticipatePin: 1,
+          pinSpacing: true
+        }
+
         });
         
         // Añadimos las animaciones a la timeline
         // Primera transición (del primer al segundo slide)
-        tl.to(sections[0], { opacity: 0, visibility: 'hidden', x: -100, duration: 0.7 }, 0.5)
-          .to(sections[1], { opacity: 1, visibility: 'visible', x: 0, duration: 0.7 }, 0.5)
+        tl.to(sections[0], { opacity: 0, visibility: 'hidden', x: -100 })
+          .to(sections[1], { opacity: 1, visibility: 'visible', x: 0 }, "<")
           
           // Espacio para ver el segundo slide
           .addLabel("midPoint", "+=0.5")
           
           // Segunda transición (del segundo al tercer slide)
-          .to(sections[1], { opacity: 0, visibility: 'hidden', x: -100, duration: 0.7 }, "midPoint")
-          .to(sections[2], { opacity: 1, visibility: 'visible', x: 0, duration: 0.7 }, "midPoint")
+          .to(sections[1], { opacity: 0, visibility: 'hidden', x: -100 }, "+=0.5")
+            .to(sections[2], { opacity: 1, visibility: 'visible', x: 0 }, "<");
           
-          // Espacio importante para ver el tercer slide antes de continuar
-          .addLabel("lastSlide", "+=1.5");
         
         // Actualizar los indicadores según la posición del scroll
         ScrollTrigger.create({
-          trigger: container,
+          trigger: wrapper,
           start: "top top",
-          end: "+=500%",
+          end: "+=200%",
           onUpdate: self => {
             // Determinamos qué sección mostrar basado en el progreso
             const progress = self.progress;
-            if (progress < 0.25) {
+            if (progress < 0.33) {
               updateIndicators("section1");
-            } else if (progress < 0.6) {
+            } else if (progress < 0.66) {
               updateIndicators("section2");
             } else {
               updateIndicators("section3");
@@ -529,6 +528,16 @@
           }
         });
 
+document.querySelectorAll('.indicator').forEach(indicator => {
+    indicator.addEventListener('click', function() {
+      const sectionId = this.getAttribute('data-section');
+      let scrollPos = wrapper.offsetTop;
+      if (sectionId === 'section2') scrollPos += window.innerHeight;
+      if (sectionId === 'section3') scrollPos += window.innerHeight * 2;
+
+      window.scrollTo({ top: scrollPos, behavior: 'smooth' });
+    });
+  });
 
 
     // Inicialización del carrusel móvil
