@@ -341,7 +341,9 @@ proyectos-pc {
   }
   
   .text-movil {
-    text-align: center;
+    text-align: left !important;
+    text-justify: inter-word;
+    hyphens: auto;
     margin-bottom: 2rem;
     font-size: 1.1rem;
     max-width: 80%;
